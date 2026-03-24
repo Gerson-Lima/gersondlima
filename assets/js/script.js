@@ -40,9 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (expanded || visibleCount < maxVisible) {
         card.style.display = "block";
+        card.classList.add("visible");
         visibleCount++;
       } else {
         card.style.display = "none";
+        card.classList.remove("visible");
         hiddenCount++;
       }
     });
@@ -76,6 +78,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial state
   updateProjectVisibility();
+
+  // Section scroll entrance animations (visible area trigger)
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        sectionObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "0px 0px -15% 0px",
+    threshold: 0.15,
+  });
+
+  document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+    sectionObserver.observe(el);
+  });
+
+  // Reveal cards when they are approaching the visible area, with staggered left-to-right delay
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: "0px 0px -10% 0px",
+    threshold: 0.1,
+  });
+
+  cards.forEach((card, index) => {
+    // delay for left-to-right stagger
+    card.style.setProperty("--card-delay", `${(index % 4) * 0.12}s`);
+    cardObserver.observe(card);
+  });
 });
 
 function sendEmail() {
