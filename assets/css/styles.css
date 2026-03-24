@@ -266,6 +266,20 @@ body {
     color: #FFFFFF;
 }
 
+#load-more-projects {
+    align-items: center;
+}
+
+#load-more-projects .load-more-icon {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+#load-more-projects .load-more-icon svg {
+    vertical-align: text-bottom;
+}
+
 .card-img-top {
     padding: 16px;
     border-radius: 24px;
