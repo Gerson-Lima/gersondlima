@@ -346,15 +346,95 @@ body {
     vertical-align: text-bottom;
 }
 
+/* ========== SCROLL PROGRESS BAR ========== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #00ADB5, #00e6de, #00ADB5);
+    background-size: 200% 100%;
+    animation: progressShimmer 2s linear infinite;
+    z-index: 9999;
+    transition: width 0.05s linear;
+    box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
+}
+
+@keyframes progressShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ========== CUSTOM SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1e25;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00ADB5, #077b81);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00e6de, #00ADB5);
+}
+
+/* Firefox scrollbar */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #00ADB5 #1a1e25;
+}
+
+/* ========== SCROLL REVEAL ANIMATIONS ========== */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.fade-up {
+    transform: translateY(60px);
+}
+
+.animate-on-scroll.fade-left {
+    transform: translateX(-60px);
+}
+
+.animate-on-scroll.fade-right {
+    transform: translateX(60px);
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate(0, 0);
+}
+
+/* Stagger children inside revealed sections */
+.animate-on-scroll.visible .stagger-child {
+    animation: staggerFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+}
+
+.animate-on-scroll.visible .stagger-child:nth-child(1) { animation-delay: 0.1s; }
+.animate-on-scroll.visible .stagger-child:nth-child(2) { animation-delay: 0.22s; }
+.animate-on-scroll.visible .stagger-child:nth-child(3) { animation-delay: 0.34s; }
+.animate-on-scroll.visible .stagger-child:nth-child(4) { animation-delay: 0.46s; }
+.animate-on-scroll.visible .stagger-child:nth-child(5) { animation-delay: 0.58s; }
+.animate-on-scroll.visible .stagger-child:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes staggerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .card-img-top {

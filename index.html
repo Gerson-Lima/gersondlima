@@ -33,6 +33,7 @@
 </head>
 
 <body>
+  <div class="scroll-progress" id="scroll-progress"></div>
   <header class="header-menu">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -126,7 +127,7 @@
   </header>
 
   <main class="container-main">
-    <section class="aboutme pt-3 animate-on-scroll" id="aboutme">
+    <section class="aboutme pt-3 animate-on-scroll fade-right" id="aboutme">
       <div class="container">
         <div class="percentual-sec row d-flex align-items-center">
           <div class="image-container col-xl-6 col-lg-4 col-md-12 col-sm-12 mt-5 d-flex justify-content-start">
@@ -139,28 +140,28 @@
             <h1 class="abtme pt-5" data-i18n="about_title">About <span class="clr">me</span></h1>
             <p class="abtme-desc" data-i18n="about_desc">Graduated in Information Technology, with experience in UX/UI, front-end web development, and mobile (iOS). A versatile professional, open to new technologies and challenges, focused on creating intuitive, responsive, and well-structured digital solutions.</p>
 
-            <div class="skill">
+            <div class="skill stagger-child">
               <div class="skill-name" data-i18n="skill_ux">User Experience Design</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:92%"></div>
               </div>
             </div>
 
-            <div class="skill">
+            <div class="skill stagger-child">
               <div class="skill-name" data-i18n="skill_ui">User Interface Design</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:94%"></div>
               </div>
             </div>
 
-            <div class="skill">
+            <div class="skill stagger-child">
               <div class="skill-name" data-i18n="skill_web">Web Development</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:88%"></div>
               </div>
             </div>
 
-            <div class="skill">
+            <div class="skill stagger-child">
               <div class="skill-name" data-i18n="skill_mobile">Mobile development</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:72%"></div>
@@ -172,13 +173,13 @@
       </div>
     </section>
 
-    <section class="services animate-on-scroll" id="services">
+    <section class="services animate-on-scroll fade-up" id="services">
       <div class="container">
         <h1 class="text-center mt-5 " data-i18n="services_title">What can <span class="clr">I do?</span></h1>
         <p class="srvc-desc d-flex mx-auto text-center mb-5" data-i18n="services_desc">I transform ideas into digital reality with intuitive design and responsive development, ensuring excellence in each project.</p>
 
         <div class="row">
-          <div class="col-xl-4 cards">
+          <div class="col-xl-4 cards stagger-child">
             <div class="card">
               <img src="/assets/img/card1.png" class="card-img" style="width: 88px;" alt="Work 1">
               <div class="card-body">
@@ -188,7 +189,7 @@
             </div>
           </div>
 
-          <div class="col-xl-4 cards">
+          <div class="col-xl-4 cards stagger-child">
             <div class="card">
               <img src="/assets/img/card2.png" class="card-img" style="width: 81px;" alt="Work 2">
               <div class="card-body">
@@ -198,7 +199,7 @@
             </div>
           </div>
 
-          <div class="col-xl-4 cards">
+          <div class="col-xl-4 cards stagger-child">
             <div class="card" id="special-card-img">
               <img src="/assets/img/card3.png" class="card-img" style="width: 55px;" alt="Work 3">
               <div class="card-body">
@@ -212,7 +213,7 @@
       </div>
     </section>
 
-    <section class="projects pb-1 pt-5 animate-on-scroll" id="projects">
+    <section class="projects pb-1 pt-5 animate-on-scroll fade-left" id="projects">
       <div class="container">
         <h1 class="text-left pt-4" data-i18n="projects_title">Some of my <span class="clr">projects</span></h1>
 
@@ -325,7 +326,7 @@
     </section>
   </main>
 
-  <footer class="footer" id="contact">
+  <footer class="footer animate-on-scroll fade-up" id="contact">
     <div class="container mb-5">
       <h1 class="text-center mt-5 " data-i18n="contact_title">Talk to <span class="clr">me!</span></h1>
       <p class="srvc-desc d-50 mx-auto text-center mb-5" data-i18n="contact_desc">Want to contact me by email? Enter your email address below. Or if you prefer, try the contact links in the footer or home.</p>

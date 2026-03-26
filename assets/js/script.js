@@ -81,6 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial state
   updateProjectVisibility();
 
+  // Scroll progress bar
+  const scrollProgress = document.getElementById("scroll-progress");
+  window.addEventListener("scroll", function () {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var progress = (scrollTop / scrollHeight) * 100;
+    scrollProgress.style.width = progress + "%";
+  });
+
   // Section scroll entrance animations (visible area trigger)
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -90,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    rootMargin: "0px 0px -15% 0px",
-    threshold: 0.15,
+    rootMargin: "0px 0px -12% 0px",
+    threshold: 0.1,
   });
 
   document.querySelectorAll(".animate-on-scroll").forEach((el) => {
