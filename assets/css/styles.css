@@ -60,6 +60,30 @@ body {
     margin-left: 20px;
 }
 
+.lang-toggle-item {
+    display: flex;
+    align-items: center;
+}
+
+.btn-lang {
+    background: transparent;
+    border: 2px solid #00ADB5;
+    color: #00ADB5;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 20px;
+    letter-spacing: 0.5px;
+}
+
+.btn-lang:hover {
+    background-color: #00ADB5;
+    color: #FFFFFF;
+}
+
 .btn {
     background-color: #00ADB5;
     color: #FFFFFF;
@@ -450,6 +474,11 @@ body {
       
     .navbar-nav .nav-item .btn {
         margin-left: 0 !important;
+    }
+
+    .btn-lang {
+        margin-top: 10px;
+        margin-left: 0;
     }
 
     .header-menu {

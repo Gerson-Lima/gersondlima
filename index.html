@@ -58,24 +58,29 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#home" data-i18n="nav_home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutme">About me</a>
+              <a class="nav-link" href="#aboutme" data-i18n="nav_about">About me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+              <a class="nav-link" href="#services" data-i18n="nav_services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a>
             </li>
             <li class="nav-item">
               <a href="/assets/Curriculum_Gerson_Lima_.pdf" download="Gerson_Lima_Curriculum" target="_blank">
-                <button class="btn ms-4 px-4" href="#">Curriculum</button>
+                <button class="btn ms-4 px-4" data-i18n="nav_curriculum">Curriculum</button>
               </a>
+            </li>
+            <li class="nav-item lang-toggle-item">
+              <button id="lang-toggle" class="btn-lang" title="Switch language">
+                <span id="lang-label">PT</span>
+              </button>
             </li>
           </ul>
         </div>
@@ -87,19 +92,19 @@
         <div class="row d-flex align-items-center">
           <div class="col-xl-6 col-lg-8 col-md-12 col-sm-12">
             <div class="intro">
-              <h5 class="intro-title text-white">Hi, I am</h5>
+              <h5 class="intro-title text-white" data-i18n="intro_title">Hi, I am</h5>
               <h4 class="intro-name">Gerson Lima</h4>
             </div>
 
             <div class="job-title">
-              <p class="job-title text-white">Developer,</p>
+              <p class="job-title text-white" data-i18n="job_dev">Developer,</p>
               <p class="job-title text-white">UI & UX</p>
               <p class="job-title text-right text-white">Designer<span class="clr">.</span></p>
             </div>
 
-            <p class="description">I build intuitive interfaces and impactful experiences. Passionate about transforming ideas into digital reality. Focused on creating solutions that delight and inspire.</p>
+            <p class="description" data-i18n="home_desc">I build intuitive interfaces and impactful experiences. Passionate about transforming ideas into digital reality. Focused on creating solutions that delight and inspire.</p>
             <a href="https://wa.me/+5584996443361" target="_blank">
-              <button class="btn px-4">Hire me</button>
+              <button class="btn px-4" data-i18n="hire_me">Hire me</button>
             </a>
           </div>
 
@@ -131,32 +136,32 @@
           </div>
 
           <div class="skills col-xl-6 col-lg-8 col-md-12 col-sm-12">
-            <h1 class="abtme pt-5">About <span class="clr">me</span></h1>
-            <p class="abtme-desc">Graduated in Information Technology, with experience in UX/UI, front-end web development, and mobile (iOS). A versatile professional, open to new technologies and challenges, focused on creating intuitive, responsive, and well-structured digital solutions.</p>
+            <h1 class="abtme pt-5" data-i18n="about_title">About <span class="clr">me</span></h1>
+            <p class="abtme-desc" data-i18n="about_desc">Graduated in Information Technology, with experience in UX/UI, front-end web development, and mobile (iOS). A versatile professional, open to new technologies and challenges, focused on creating intuitive, responsive, and well-structured digital solutions.</p>
 
             <div class="skill">
-              <div class="skill-name">User Experience Design</div>
+              <div class="skill-name" data-i18n="skill_ux">User Experience Design</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:92%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <div class="skill-name">User Interface Design</div>
+              <div class="skill-name" data-i18n="skill_ui">User Interface Design</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:94%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <div class="skill-name">Web Development</div>
+              <div class="skill-name" data-i18n="skill_web">Web Development</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:88%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <div class="skill-name">Mobile development</div>
+              <div class="skill-name" data-i18n="skill_mobile">Mobile development</div>
               <div class="skill-bar">
                 <div class="skill-per" style="max-width:72%"></div>
               </div>
@@ -169,16 +174,16 @@
 
     <section class="services animate-on-scroll" id="services">
       <div class="container">
-        <h1 class="text-center mt-5 ">What can <span class="clr">I do?</span></h1>
-        <p class="srvc-desc d-flex mx-auto text-center mb-5">I transform ideas into digital reality with intuitive design and responsive development, ensuring excellence in each project.</p>
+        <h1 class="text-center mt-5 " data-i18n="services_title">What can <span class="clr">I do?</span></h1>
+        <p class="srvc-desc d-flex mx-auto text-center mb-5" data-i18n="services_desc">I transform ideas into digital reality with intuitive design and responsive development, ensuring excellence in each project.</p>
 
         <div class="row">
           <div class="col-xl-4 cards">
             <div class="card">
               <img src="/assets/img/card1.png" class="card-img" style="width: 88px;" alt="Work 1">
               <div class="card-body">
-                <h5 class="card-title">UX/UI Design</h5>
-                <p class="card-text mb-4 mt-3">I create aesthetically pleasing and functional user interfaces focused on providing intuitive experiences. I prioritize users' needs to transform complexity into visual simplicity and efficient usability.</p>
+                <h5 class="card-title" data-i18n="card_uxui_title">UX/UI Design</h5>
+                <p class="card-text mb-4 mt-3" data-i18n="card_uxui_desc">I create aesthetically pleasing and functional user interfaces focused on providing intuitive experiences. I prioritize users' needs to transform complexity into visual simplicity and efficient usability.</p>
               </div>
             </div>
           </div>
@@ -187,8 +192,8 @@
             <div class="card">
               <img src="/assets/img/card2.png" class="card-img" style="width: 81px;" alt="Work 2">
               <div class="card-body">
-                <h5 class="card-title">Web Pages Development</h5>
-                <p class="card-text mb-4 mt-3">I build modern, responsive websites and web applications, focusing on performance, design and accessibility. Prioritizing the user experience and optimizing every detail.</p>
+                <h5 class="card-title" data-i18n="card_web_title">Web Pages Development</h5>
+                <p class="card-text mb-4 mt-3" data-i18n="card_web_desc">I build modern, responsive websites and web applications, focusing on performance, design and accessibility. Prioritizing the user experience and optimizing every detail.</p>
               </div>
             </div>
           </div>
@@ -197,8 +202,8 @@
             <div class="card" id="special-card-img">
               <img src="/assets/img/card3.png" class="card-img" style="width: 55px;" alt="Work 3">
               <div class="card-body">
-                <h5 class="card-title">Mobile App Development</h5>
-                <p class="card-text mb-4 mt-3">I develop native mobile applications for iOS, with intuitive, simple-to-use, interactive and high-performance interfaces, optimized to offer a fluid and efficient experience to users.</p>
+                <h5 class="card-title" data-i18n="card_mobile_title">Mobile App Development</h5>
+                <p class="card-text mb-4 mt-3" data-i18n="card_mobile_desc">I develop native mobile applications for iOS, with intuitive, simple-to-use, interactive and high-performance interfaces, optimized to offer a fluid and efficient experience to users.</p>
               </div>
             </div>
           </div>
@@ -209,10 +214,10 @@
 
     <section class="projects pb-1 pt-5 animate-on-scroll" id="projects">
       <div class="container">
-        <h1 class="text-left pt-4">Some of my <span class="clr">projects</span></h1>
+        <h1 class="text-left pt-4" data-i18n="projects_title">Some of my <span class="clr">projects</span></h1>
 
         <div class="filter-btn-group mb-5">
-          <button class="filter-btn me-2 active" data-filter="all">All</button>
+          <button class="filter-btn me-2 active" data-filter="all" data-i18n="filter_all">All</button>
           <button class="filter-btn me-2" data-filter="uiux">UI/UX</button>
           <button class="filter-btn me-2" data-filter="web">Web</button>
           <button class="filter-btn me-2" data-filter="mobile">Mobile</button>
@@ -223,10 +228,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_web.png" class="card-img-top" alt="Project 1">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Personal Landing Page</h5>
-                <p class="card-text-work">Project to talk a little about who I am, demonstrate some of my technical skills, present some of my work and provide ways to contact me.</p>
+                <h5 class="card-title-work" data-i18n="proj1_title">Personal Landing Page</h5>
+                <p class="card-text-work" data-i18n="proj1_desc">Project to talk a little about who I am, demonstrate some of my technical skills, present some of my work and provide ways to contact me.</p>
                 <div class="mt-auto">
-                  <a href="https://www.gersondlima.com" target="_blank" class="btn">See project</a>
+                  <a href="https://www.gersondlima.com" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -236,10 +241,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_mobile1.png" class="card-img-top" alt="Project 2">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Poritos Pet Shop</h5>
-                <p class="card-text-work">Application developed in Swift (SwiftUI). It allows pet shop owners to easily manage their business with a user-friendly and intuitive interface.</p>
+                <h5 class="card-title-work" data-i18n="proj2_title">Poritos Pet Shop</h5>
+                <p class="card-text-work" data-i18n="proj2_desc">Application developed in Swift (SwiftUI). It allows pet shop owners to easily manage their business with a user-friendly and intuitive interface.</p>
                 <div class="mt-auto">
-                  <a href="https://github.com/Gerson-Lima/Poritos-app.git" target="_blank" class="btn">See project</a>
+                  <a href="https://github.com/Gerson-Lima/Poritos-app.git" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -249,10 +254,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_mobile2.png" class="card-img-top" alt="Project 3">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Weather App</h5>
-                <p class="card-text-work">Application developed in Swift (UIKit). Allows users to see the weather forecast for the next hours and days in a quick, intuitive and very simple way.</p>
+                <h5 class="card-title-work" data-i18n="proj3_title">Weather App</h5>
+                <p class="card-text-work" data-i18n="proj3_desc">Application developed in Swift (UIKit). Allows users to see the weather forecast for the next hours and days in a quick, intuitive and very simple way.</p>
                 <div class="mt-auto">
-                  <a href="https://github.com/Gerson-Lima/WeatherForecastApp" target="_blank" class="btn">See project</a>
+                  <a href="https://github.com/Gerson-Lima/WeatherForecastApp" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -262,10 +267,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_prototype.png" class="card-img-top" alt="Project 4">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Desconation</h5>
-                <p class="card-text-work">Prototype made from the proposal of searching and sharing promotions and discounts. Allows users to find ways to save.</p>
+                <h5 class="card-title-work" data-i18n="proj4_title">Desconation</h5>
+                <p class="card-text-work" data-i18n="proj4_desc">Prototype made from the proposal of searching and sharing promotions and discounts. Allows users to find ways to save.</p>
                 <div class="mt-auto">
-                  <a href="https://www.figma.com/design/c7n06gz7e4CY49Kok8eLjc/PDS?node-id=0-1&t=7IQ17MwSwR8A9gqo-1" target="_blank" class="btn">See project</a>
+                  <a href="https://www.figma.com/design/c7n06gz7e4CY49Kok8eLjc/PDS?node-id=0-1&t=7IQ17MwSwR8A9gqo-1" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -275,10 +280,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_web_2(altotech).png" class="card-img-top" alt="Project 5">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Mulheres na AltoTech</h5>
-                <p class="card-text-work">Small project started to give visibility to the women who are part of the AltoTech Junior Enterprise (UFERSA - Pau dos Ferros).</p>
+                <h5 class="card-title-work" data-i18n="proj5_title">Mulheres na AltoTech</h5>
+                <p class="card-text-work" data-i18n="proj5_desc">Small project started to give visibility to the women who are part of the AltoTech Junior Enterprise (UFERSA - Pau dos Ferros).</p>
                 <div class="mt-auto">
-                  <a href="https://github.com/Gerson-Lima/Mulheres_na_AltoTech" target="_blank" class="btn">See project</a>
+                  <a href="https://github.com/Gerson-Lima/Mulheres_na_AltoTech" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -288,10 +293,10 @@
             <div class="card h-100">
               <img src="/assets/img/Thumbnail_web_alana.png" class="card-img-top" alt="Project 6">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Alana Arquitetura</h5>
-                <p class="card-text-work">Architecture website focused on showcasing projects, strengthening professional identity, and facilitating client contact.</p>
+                <h5 class="card-title-work" data-i18n="proj6_title">Alana Arquitetura</h5>
+                <p class="card-text-work" data-i18n="proj6_desc">Architecture website focused on showcasing projects, strengthening professional identity, and facilitating client contact.</p>
                 <div class="mt-auto">
-                  <a href="https://www.alanaarquitetura.com/" target="_blank" class="btn">See project</a>
+                  <a href="https://www.alanaarquitetura.com/" target="_blank" class="btn" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -301,10 +306,10 @@
             <div class="card h-100">
               <img src="/assets/img/coming_soon.png" class="card-img-top" alt="Project 6">
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title-work">Coming soon...</h5>
-                <p class="card-text-work">New projects coming soon. Stay tuned for upcoming work and updates.</p>
+                <h5 class="card-title-work" data-i18n="proj7_title">Coming soon...</h5>
+                <p class="card-text-work" data-i18n="proj7_desc">New projects coming soon. Stay tuned for upcoming work and updates.</p>
                 <div class="mt-auto">
-                  <a class="btn btn-coming-soon" aria-disabled="true" tabindex="-1">See project</a>
+                  <a class="btn btn-coming-soon" aria-disabled="true" tabindex="-1" data-i18n="see_project">See project</a>
                 </div>
               </div>
             </div>
@@ -313,7 +318,7 @@
         </div>
 
         <div class="text-center mt-4">
-          <button id="load-more-projects" class="btn" style="display: none;">Show more</button>
+          <button id="load-more-projects" class="btn" style="display: none;" data-i18n="show_more">Show more</button>
         </div>
 
       </div>
@@ -322,12 +327,12 @@
 
   <footer class="footer" id="contact">
     <div class="container mb-5">
-      <h1 class="text-center mt-5 ">Talk to <span class="clr">me!</span></h1>
-      <p class="srvc-desc d-50 mx-auto text-center mb-5">Want to contact me by email? Enter your email address below. Or if you prefer, try the contact links in the footer or home.</p>
+      <h1 class="text-center mt-5 " data-i18n="contact_title">Talk to <span class="clr">me!</span></h1>
+      <p class="srvc-desc d-50 mx-auto text-center mb-5" data-i18n="contact_desc">Want to contact me by email? Enter your email address below. Or if you prefer, try the contact links in the footer or home.</p>
 
       <div class="email-container">
-        <input class="email-field" type="email" id="email" name="email" placeholder="Enter your email" required>
-        <button class="btn" onclick="sendEmail()">Contact me</button>
+        <input class="email-field" type="email" id="email" name="email" data-i18n-placeholder="email_placeholder" placeholder="Enter your email" required>
+        <button class="btn" onclick="sendEmail()" data-i18n="contact_btn">Contact me</button>
       </div>
 
       <div class="final-info-logo mt-5 pt-5">
@@ -336,19 +341,19 @@
 
       <ul class="navbar-nav-footer m-3">
         <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#home" data-i18n="nav_home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#aboutme">About me</a>
+          <a class="nav-link" href="#aboutme" data-i18n="nav_about">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#services" data-i18n="nav_services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a>
         </li>
       </ul>
 
@@ -361,7 +366,7 @@
 
       <div class="row">
         <div class="col-xl-12 mt-5 cr-footer">
-          <span class="text-white mx-auto inc-text">&copy; 2026<span class="clr"><b> Gerson Lima</b></span> All Rights Reserved.</span>
+          <span class="text-white mx-auto inc-text" data-i18n="footer_rights">&copy; 2026<span class="clr"><b> Gerson Lima</b></span> All Rights Reserved.</span>
         </div>
       </div>
     </div>
