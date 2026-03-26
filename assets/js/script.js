@@ -88,6 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var progress = (scrollTop / scrollHeight) * 100;
     scrollProgress.style.width = progress + "%";
+
+    // Fallback: reveal footer when user is near the bottom of the page
+    if (scrollHeight - scrollTop < 150) {
+      var footer = document.querySelector("footer.animate-on-scroll");
+      if (footer && !footer.classList.contains("visible")) {
+        footer.classList.add("visible");
+      }
+    }
   });
 
   // Section scroll entrance animations (visible area trigger)

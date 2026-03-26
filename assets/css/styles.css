@@ -12,6 +12,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #222831;
     padding-top: 110px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -332,7 +333,9 @@ body {
 }
 
 #load-more-projects {
+    display: inline-flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 18px;
 }
 
@@ -472,15 +475,15 @@ html {
 }
 
 .cr-footer {
-    position: absolute;
-    padding-bottom: 18PX;
-    right: 0;
+    padding: 18px 0;
     background-color: #2D333B;
     color: #2D333B;
+    width: 100%;
+    text-align: center;
 }
 
 .inc-text {
-    margin-top: 20px;
+    margin: 0;
 }
 
 .btn-coming-soon{
@@ -669,6 +672,7 @@ html {
 
     .footer {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
