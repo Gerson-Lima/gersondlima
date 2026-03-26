@@ -1,3 +1,14 @@
+window.addEventListener("load", function () {
+  var preloader = document.getElementById("preloader");
+  var loaderDelay = 1500;
+  if (preloader) {
+    setTimeout(function () {
+      preloader.classList.add("hidden");
+      setTimeout(function () { preloader.remove(); }, 500);
+    }, loaderDelay);
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggler = document.querySelector(".navbar-toggler");
   const collapseEl = document.getElementById("navbarNav");
@@ -88,14 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var progress = (scrollTop / scrollHeight) * 100;
     scrollProgress.style.width = progress + "%";
-
-    // Fallback: reveal footer when user is near the bottom of the page
-    if (scrollHeight - scrollTop < 150) {
-      var footer = document.querySelector("footer.animate-on-scroll");
-      if (footer && !footer.classList.contains("visible")) {
-        footer.classList.add("visible");
-      }
-    }
   });
 
   // Section scroll entrance animations (visible area trigger)
@@ -112,7 +115,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-    sectionObserver.observe(el);
+    // Elements inside the footer need a separate observer without negative rootMargin
+    if (el.closest("footer")) {
+      var footerObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            footerObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.01 });
+      footerObserver.observe(el);
+    } else {
+      sectionObserver.observe(el);
+    }
   });
 
   // Reveal cards when they are approaching the visible area, with staggered left-to-right delay

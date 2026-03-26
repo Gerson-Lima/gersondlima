@@ -91,7 +91,7 @@ const translations = {
     proj7_desc: "Novos projetos em breve. Fique atento para próximos trabalhos e atualizações.",
     see_project: "Ver projeto",
     show_more: "Ver mais",
-    contact_title: 'Entre em <span class="clr">contato</span>!',
+    contact_title: 'Entre em <span class="clr">contato!</span>',
     contact_desc: "Quer entrar em contato por email? Digite seu endereço de email abaixo. Ou se preferir, use os links de contato no rodapé ou na página inicial.",
     email_placeholder: "Digite seu email",
     contact_btn: "Contate-me",
