@@ -15,8 +15,6 @@
 
 .experience-section {
     width: 100%;
-    max-width: 1260px;
-    margin: 0 auto;
     position: relative;
     z-index: 1;
     padding-top: 80px;
@@ -65,7 +63,7 @@
 }
 .timeline {
     position: relative;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
     padding-left: 0;
 }
@@ -102,14 +100,14 @@
 .timeline-item:nth-child(odd) .experience-card {
         margin-right: auto;
         margin-left: 0;
-        width: 46%;
+        width: calc(50% - 40px);
         order: 1;
 }
 /* Card à direita */
 .timeline-item:nth-child(even) .experience-card {
         margin-left: auto;
         margin-right: 0;
-        width: 46%;
+        width: calc(50% - 40px);
         order: 2;
 }
 @media (max-width: 900px) {
@@ -290,6 +288,23 @@
 }
 .brand-card:hover::before {
     opacity: 1;
+}
+a.brand-card {
+    text-decoration: none;
+    flex-direction: column;
+    gap: 10px;
+}
+.brand-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(1) brightness(1.2);
+    transition: filter 0.25s ease;
+}
+a.brand-card:hover .brand-img {
+    filter: grayscale(0) brightness(1);
 }
 .brand-name {
     position: relative;
